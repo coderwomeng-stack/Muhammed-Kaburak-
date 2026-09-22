@@ -13,6 +13,7 @@
         :root {
             --primary-color: #0f172a; /* Derin Kurumsal Lacivert */
             --accent-color: #2563eb;  /* Güven Veren Mavi */
+            --whatsapp-color: #25d366; /* WhatsApp Yeşili */
             --text-color: #334155;
             --bg-light: #f8fafc;
             --white: #ffffff;
@@ -182,6 +183,103 @@
             color: var(--white);
         }
 
+        /* WHATSAPP FLOAT BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-color);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #22bf5b;
+        }
+
+        /* ADRES & İLETİŞİM SECTION STİLLERİ */
+        .address-section {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-title p {
+            color: var(--text-color);
+            font-size: 1.05rem;
+        }
+
+        .address-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .address-card {
+            background-color: var(--bg-light);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .address-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-color: var(--accent-color);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .address-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .address-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
         /* RESPONSIVE DESIGN (MOBILE) */
         @media screen and (max-width: 768px) {
             .nav-links {
@@ -213,10 +311,20 @@
             .hero-buttons {
                 flex-direction: column;
             }
+
+            .address-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- WHATSAPP SABİT BUTON -->
+    <!-- Not: '905551234567' kısmını Muhammed Bey'in gerçek telefon numarasıyla değiştireceksin -->
+    <a href="https://wa.me5442017429/?text=Merhaba,%20mali%20müşavirlik%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- HEADER -->
     <header>
@@ -248,6 +356,45 @@
         </div>
     </section>
 
+    <!-- ADRES & İLETİŞİM BÖLÜMÜ -->
+    <section class="address-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ofisimiz & İletişim</h2>
+                <p>Mali danışmanlık ve randevularınız için ofisimizi ziyaret edebilir veya iletişim kanallarımızdan bize ulaşabilirsiniz.</p>
+            </div>
+            
+            <div class="address-grid">
+                <!-- Adres Bilgi Kartı -->
+                <div class="address-card">
+                    <div class="icon-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adres</h3>
+                    <p>Şerefiye mah irfan Baştuğ CAD Yılmazlar iş merkezi kat 5 no.35 İpekyolu van</p>
+                </div>
+
+                <!-- Telefon Bilgi Kartı -->
+                <div class="address-card">
+                    <div class="icon-box">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Telefon</h3>
+                    <p>0544 201 74 29</p>
+                </div>
+
+                <!-- E-posta Bilgi Kartı -->
+                <div class="address-card">
+                    <div class="icon-box">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-Posta</h3>
+                    <p>smmmmehmetkaburak@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- JAVASCRIPT FOR BURGER MENU -->
     <script>
         const burger = document.querySelector('.burger');
@@ -255,7 +402,6 @@
 
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // İkonu değiştir (Çizgi <-> Çarpı)
             const icon = burger.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
