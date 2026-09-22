@@ -1,0 +1,296 @@
+# Muhammed-Kaburak-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mali Müşavirlik Bürosu</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigasyon -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">MaliMüşavir.</a>
+            <nav class="nav-menu">
+                <a href="#hizmetler">Hizmetler</a>
+                <a href="#hakkimizda">Hakkımda</a>
+                <a href="#iletisim" class="btn-iletisim">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Karşılama Alanı -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Güvenilir Mali Çözümler ve Profesyonel Danışmanlık</h1>
+            <p>İşletmenizin finansal geleceğini güvence altına alıyor, tüm mali süreçlerinizi şeffaflık ve uzmanlıkla yönetiyoruz.</p>
+            <a href="#iletisim" class="btn-primary">Hemen Danışın</a>
+        </div>
+    </section>
+
+    <!-- Hizmetler Alanı -->
+    <section id="hizmetler" class="services">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Muhasebe & Defter Tutma</h3>
+                    <p>Yasal defterlerinizin mevzuata uygun olarak tutulması ve raporlanması.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Vergi Danışmanlığı</h3>
+                    <p>Vergi planlaması, beyannameler ve güncel mevzuat takibi ile risk yönetimi.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bordrolama & SGK</h3>
+                    <p>Personel özlük dosyaları, maaş bordroları ve SGK işlemlerinin takibi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımda Alanı -->
+    <section id="hakkimizda" class="about">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 class="section-title">Hakkımda</h2>
+                <p>Yılların kazandırdığı tecrübe ve güncel mevzuat bilgisiyle, şahıs ve tüzel kişiliklerin mali ve hukuki süreçlerinde güvenilir iş ortağı olarak çalışıyorum. İşletmenizin büyümesine odaklanabilmeniz için karmaşık finansal yükleri üzerinizden alıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Alanı -->
+    <section id="iletisim" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="contact-desc">Sorularınız ve danışmanlık talepleriniz için bizimle iletişime geçebilirsiniz.</p>
+            <div class="contact-box">
+                <p><strong>E-posta:</strong> info@malimusavir.com</p>
+                <p><strong>Telefon:</strong> +90 (555) 000 00 00</p>
+                <p><strong>Adres:</strong> Merkez Mahallesi, İş Merkezi Kat: 3, Merkez / Şehir</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mali Müşavirlik Bürosu. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Genel Ayarlar ve Renk Değişkenleri */
+:root {
+    --bg-crem: #FBF9F5;       /* Alt zemin krem */
+    --text-lacivert: #1A2B4C;  /* Yazılar lacivert */
+    --border-mavi: #2563EB;    /* Çerçeve ve vurgu mavi */
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-crem);
+    color: var(--text-lacivert);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: var(--bg-crem);
+    border-bottom: 2px solid var(--border-mavi);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-lacivert);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-lacivert);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--border-mavi);
+}
+
+.btn-iletisim {
+    border: 2px solid var(--border-mavi);
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: all 0.3s !important;
+}
+
+.btn-iletisim:hover {
+    background-color: var(--border-mavi);
+    color: #fff !important;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: var(--text-lacivert);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--border-mavi);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--border-mavi);
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-lacivert);
+}
+
+/* Hizmetler */
+.services {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--text-lacivert);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--border-mavi);
+    margin: 10px auto 0 auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid var(--border-mavi);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-lacivert);
+}
+
+/* Hakkımda */
+.about {
+    padding: 80px 0;
+    background-color: #F4F1EA; /* Kremin bir ton koyusu */
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+}
+
+/* İletişim */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-desc {
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    display: inline-block;
+    background-color: var(--card-bg);
+    padding: 30px 50px;
+    border-radius: 8px;
+    border: 2px solid var(--border-mavi);
+    text-align: left;
+}
+
+.contact-box p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-lacivert);
+    color: var(--bg-crem);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
